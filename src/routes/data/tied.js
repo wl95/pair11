@@ -1,0 +1,76 @@
+export default {
+    title:"电子银行支付绑卡客户量统计表",
+    list1:[
+        {
+            name:"name",
+            value:"请输入",
+            typ:"input",
+            selectType:'organ_id',
+            label:"机构编码/机构名称:"
+        },
+        {  
+            name:"protype",
+            value:0,
+            typ:"radio",
+            selectType:'product_code',
+            label:"产品类型:",
+            child:['全部','微支付','快捷支付','协议支付']
+        },
+        {  
+            name:"orgtype",
+            value:0,
+            typ:"radio",
+            selectType:'organ_mode',
+            label:"机构属性:",
+            child:['全部','自营','代理']
+        },
+        {
+            name:'trans',
+            value:0,
+            typ:'radio',
+            label:'交易渠道:',
+            selectType:'channel',
+            child:['全部','直连','网联']
+        },
+        {
+            name:'statistic',
+            value:0,
+            typ:'radio',
+            selectType:'show_type',
+            label:'统计方式:',
+            child:['汇总','明细']
+        },
+        {   
+            name:"period",
+            value:0,
+            typ:"radio",
+            label:"周期类型:",
+            selectType:'date_level',
+            child:['日','月','季','年','半年']
+        },
+        {
+            name:'halfyear',
+            value:0,
+            typ:'radio',
+            label:'选择半年:',
+            selectType:'date_num',
+            child:['上半年','下半年']
+        },
+        {
+            name:'qtr',
+            value:0,
+            typ:'radio',
+            label:'选择季度:',
+            selectType:'date_num',
+            child:['第一季度','第二季度','第三季度','第四季度']
+        },
+        {
+            name: "Date",   
+            value:new Date(),
+            typ:"Date",
+            label:"选择日期:"
+        }
+    ]
+}
+
+
